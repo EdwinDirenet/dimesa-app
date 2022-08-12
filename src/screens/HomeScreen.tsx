@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Actionsheet, Box, Button, Spinner, Stack, Text, useDisclose, View, VStack} from 'native-base';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useCurrency} from '../hooks/useCurrency';
 import CardCurrency from '../components/CardCurrency';
-import {Image} from 'react-native';
+import {Image, Platform} from 'react-native';
 import Convertidor from '../components/Convertidor';
 
 const HomeScreen = () => {
 
   const { currency, isLoading } = useCurrency();
-  const { top } = useSafeAreaInsets();
   const { isOpen, onClose, onOpen } = useDisclose();
 
   return (
     <>
-      <View bgColor='white' paddingTop={ top } marginBottom={ 5 }>
+      <View bgColor='white' marginBottom={ 5 }>
         <Image 
           source={ require('../../assets/divisas-dimesa-logo.png') } 
           resizeMode='contain'
@@ -45,6 +43,7 @@ const HomeScreen = () => {
           <Button 
             bgColor='secondary.900' padding={ 4 }
             onPress={ onOpen }
+            borderRadius={Platform.OS === 'ios' ? 15 : 5}
           >
             <Text fontSize='lg' fontWeight='bold'>Haz tu conversión aquí</Text>
           </Button>
