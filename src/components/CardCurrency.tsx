@@ -20,6 +20,7 @@ const CardCurrency = ({ typeChange, sell, buy }: Props) => {
       justifyContent='space-around'
       alignItems='center'
       padding={ 3 }
+      flex={1}
       rounded='md'
     >
       <Text fontSize='xl' fontWeight='bold'>{ typeChange }</Text>

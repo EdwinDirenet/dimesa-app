@@ -24,6 +24,7 @@ const HomeScreen = () => {
       <View flex={ 1 } paddingX={ 3 }>
         <VStack
           space={ 2 }
+          flex={1}
         >
           {
             (!isLoading)
@@ -40,7 +41,7 @@ const HomeScreen = () => {
               : <Spinner />
           }
         </VStack>
-        <Stack mt={ 5 }>
+        <Stack py={5}>
           <Button 
             bgColor='secondary.900' padding={ 4 }
             onPress={ onOpen }
