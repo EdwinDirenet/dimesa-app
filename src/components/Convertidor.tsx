@@ -64,7 +64,7 @@ const Convertidor = () => {
       </Button>
       <View alignItems='center'>
         {
-          ( result ) && <Text fontSize='2xl' fontWeight='bold' mt={ 5 }>${ result }</Text>
+          ( result ) && <Text fontSize='2xl' fontWeight='bold' color='secondary.900' mt={ 5 }><Text fontSize="lg" fontWeight='normal' color='white'>Conversión: </Text>${ result }</Text>
         }
       </View>
     </View>

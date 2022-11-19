@@ -1,14 +1,17 @@
 import React, { useEffect } from 'react';
-import {Actionsheet, Box, Button, Spinner, Stack, Text, useDisclose, View, VStack} from 'native-base';
+import {Actionsheet, Box, Button, KeyboardAvoidingView, Spinner, Stack, Text, useDisclose, View, VStack} from 'native-base';
 import {useCurrency} from '../hooks/useCurrency';
 import CardCurrency from '../components/CardCurrency';
 import {Image, Platform} from 'react-native';
 import Convertidor from '../components/Convertidor';
+import useKeyboardBottomInset from '../hooks/useKeyboardBottomInset';
 
 const HomeScreen = () => {
 
   const { currency, isLoading } = useCurrency();
   const { isOpen, onClose, onOpen } = useDisclose();
+
+  const bottomInset = useKeyboardBottomInset();
 
   return (
     <>
@@ -49,7 +52,7 @@ const HomeScreen = () => {
           </Button>
         </Stack>
         <Actionsheet isOpen={ isOpen } onClose={ onClose }>
-          <Actionsheet.Content bgColor='primary.900'>
+          <Actionsheet.Content bgColor='primary.900' bottom={bottomInset}>
             <Box w='100%' p={ 3 }>
               <Convertidor />
             </Box>
