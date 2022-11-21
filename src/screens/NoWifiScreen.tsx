@@ -8,20 +8,20 @@ const NoWifiScreen = () => {
 
     return (
         <View
-            backgroundColor='white'
+            backgroundColor='primary.100'
             flex={1}
             paddingX={50}
             justifyContent='center'
             alignItems='center'
         >
             <Image
-                source={require('../../assets/divisas-dimesa-logo.png')}
+                source={require('../../assets/logo-dark-dimesa.png')}
                 resizeMode='contain'
                 style={{ width: 200, height: 70, marginVertical: 5, alignSelf: 'center' }}
                 alt='Divisas Dimesa'
             />
             <Text
-                color='primary.900'
+                color='white'
                 textAlign='center'
                 fontSize='lg'
                 fontWeight='bold'

@@ -2,11 +2,10 @@ import React from 'react';
 import { createDrawerNavigator, DrawerHeaderProps } from '@react-navigation/drawer';
 import HomeScreen from '../screens/HomeScreen';
 import HeaderDrawer from '../components/HeaderDrawer';
-import LocationScreen from '../screens/LocationScreen';
-import { Button, useTheme, View } from 'native-base';
-import { Image } from 'react-native';
+import { useTheme } from 'native-base';
 import DrawerContent from './DrawerContent';
 import Icon from 'react-native-vector-icons/Ionicons';
+import TabLocationNavigation from './TabLocationNavigation';
 
 const Drawer = createDrawerNavigator();
 
@@ -25,8 +24,9 @@ const DrawerNavigation = () => {
                     marginLeft: -20,
                     fontWeight: 'bold'
                 },
-                drawerActiveBackgroundColor: colors.primary['900'],
-                drawerActiveTintColor: colors.secondary['900'],
+                drawerActiveBackgroundColor: colors.secondary['900'],
+                drawerActiveTintColor: colors.primary['900'],
+                drawerInactiveTintColor: 'white'
             }}
             drawerContent={(props) => <DrawerContent {...props} />}
         >
@@ -41,7 +41,7 @@ const DrawerNavigation = () => {
                     )
                 }}
             />
-            <Drawer.Screen name="Sucursales" component={LocationScreen} 
+            <Drawer.Screen name="Sucursales" component={TabLocationNavigation} 
                 options={{
                     drawerIcon: ({color}) => (
                         <Icon 

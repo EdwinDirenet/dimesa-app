@@ -1,6 +1,7 @@
 import React from 'react';
-import {Heading, Text, View} from 'native-base';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import {Button, Heading, Text, View} from 'native-base';
+import MapView, { Marker } from 'react-native-maps';
+import { Linking, Platform } from 'react-native';
 
 interface Props {
     titleCard: string;
@@ -18,6 +19,22 @@ const MapCard = ({
     schedule,
     coordinates
 }: Props) => {
+
+  const scheme = Platform.select({
+    ios: 'maps:0,0?q=',
+    android: 'geo:0,0?q='
+  });
+  const coords = `${coordinates.latitude},${coordinates.longitude}`;
+  const label = 'Divisas Dimesa';
+  const url = Platform.select({
+    ios: `${scheme}${label}@${coords}`,
+    android: `${scheme}${coords}(${label})`
+  });
+
+  const handleOpenMapsApp = () => {
+    Linking.openURL(url!);
+  }
+
   return (
         <View
           paddingY={5}
@@ -41,13 +58,13 @@ const MapCard = ({
           </View>
           <MapView
             style={{
-              height: 250
+              height: 200
             }}
             region={{
               latitude: coordinates.latitude,
               longitude: coordinates.longitude,
-              latitudeDelta: 0.015,
-              longitudeDelta: 0.0121,
+              latitudeDelta: 0.0080,
+              longitudeDelta: 0.0080,
             }}
             scrollEnabled={false}
             zoomEnabled={false}
@@ -56,6 +73,15 @@ const MapCard = ({
               coordinate={coordinates}
             />
           </MapView>
+          <Button
+            bgColor='secondary.900'
+            onPress={handleOpenMapsApp}
+            mt={3}
+          >
+            <Text>
+              Abrir en {Platform.OS === 'ios' ? 'Apple Maps' : 'Google Maps'}
+            </Text>
+          </Button>
         </View>
   )
 }

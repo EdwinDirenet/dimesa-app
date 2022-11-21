@@ -1,0 +1,70 @@
+{
+    "nuevo_leon": [
+        {
+            "id": 1,
+            "title": "Matriz Valle",
+            "address": "Vasconcelos 735-2 Pte., Col. del Valle / San Pedro Garza García NL / CP 66220",
+            "schedule": [
+                "Lunes a Viernes 9AM a 6PM",
+                "Sábado de 9AM a 1PM"
+            ],
+            "coordinates": {
+                "latitude": 25.656722,
+                "longitude": -100.388500 
+            }
+        },
+        {
+            "id": 2,
+            "title": "Suc. Gómez Morín",
+            "address": "Av. Gómez Morín #400 2-A, Col. del Valle / San Pedro Garza García NL / CP 6625",
+            "schedule": [
+                "Lunes a Viernes 9AM a 6PM",
+                "Sábado de 9AM a 1PM"
+            ],
+            "coordinates": {
+                "latitude": 25.6560929,
+                "longitude": -100.3573115 
+            }
+        },
+        {
+            "id": 3,
+            "title": "Suc. Miravalle",
+            "address": "Av. San Pedro 245, Col. Miravalle / San Pedro Garza García NL / CP 64660",
+            "schedule": [
+                "Lunes a Viernes 9AM a 6PM",
+                "Sábado de 9AM a 1PM"
+            ],
+            "coordinates": {
+                "latitude": 25.669731,
+                "longitude": -100.3687913 
+            }
+        },
+        {
+            "id": 4,
+            "title": "Suc. Cumbres",
+            "address": "Paseo de los Leones 2312 L-1, Col. Cumbres 2do Sector / Monterrey, NL / CP 64610",
+            "schedule": [
+                "Lunes a Viernes 9AM a 6PM",
+                "Sábado de 9AM a 1PM"
+            ],
+            "coordinates": {
+                "latitude": 25.7102794,
+                "longitude": -100.3804024 
+            }
+        }
+    ],
+    "quintana_roo": [
+        {
+            "id": 1,
+            "title": "Suc. Tulum",
+            "address": "Av. Tulum MZ7 LT17 LOC04 / Geminis y Libra / TLM Centro C.P.77760 Tulum, QR",
+            "schedule": [
+                "Lunes a Domingo 9AM a 9PM"
+            ],
+            "coordinates": {
+                "latitude": 20.2130278,
+                "longitude": -87.4565 
+            }
+        }
+    ]
+}
