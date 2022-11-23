@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D2C59"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="169dp"
+        android:background="@mipmap/ic_launcher_round"
+        android:scaleX="1"
+        android:scaleY="1">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60px"
+        android:autoText="true"
+        android:text="Divisas Dimesa"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#000000"
+        android:textDirection="firstStrong"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</LinearLayout>

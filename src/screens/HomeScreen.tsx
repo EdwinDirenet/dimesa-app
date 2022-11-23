@@ -15,9 +15,9 @@ const HomeScreen = () => {
 
   return (
     <>
-      <View bgColor='white' marginBottom={ 5 }>
+      <View bgColor='primary.100' marginBottom={ 5 }>
         <Image 
-          source={ require('../../assets/divisas-dimesa-logo.png') } 
+          source={ require('../../assets/logo-dark-dimesa.png') } 
           resizeMode='contain'
           style={{ width: 200, height: 70, marginVertical: 5 }}
         />

@@ -13,19 +13,19 @@ const HeaderDrawer = ({navigation, route}: Props) => {
     const {colors} = useTheme();
 
     return (
-        <View pt={top} px={3} bgColor='white' flexDir='row' alignItems='center'>
+        <View pt={top} px={3} bgColor={colors.primary['100']} flexDir='row' alignItems='center'>
             <TouchableOpacity
                 onPress={() => navigation.openDrawer()}
                 style={{marginVertical: 5}}
             >
                 <Icon 
                     name='menu'
-                    color={colors.primary['900']}
+                    color='white'
                     size={35}
                 />
             </TouchableOpacity>
             {
-                (route.name != 'Convertidor') && <Heading ml={3}>{route.name}</Heading>
+                (route.name != 'Convertidor') && <Heading ml={3} color='white'>{route.name}</Heading>
             }
         </View>
     );
